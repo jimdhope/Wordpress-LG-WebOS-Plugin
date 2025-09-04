@@ -1,0 +1,48 @@
+/* Menus */
+.lgwebos-remote-menu {
+    background: #111;
+    color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .lgwebos-dir-left { top:0; bottom:0; left:0; width:300px; position:fixed; transform:translateX(-100%); }
+    .lgwebos-dir-right { top:0; bottom:0; right:0; width:300px; position:fixed; transform:translateX(100%); }
+    .lgwebos-dir-top { top:0; left:0; right:0; height:40%; position:fixed; transform:translateY(-100%); }
+    .lgwebos-dir-bottom { bottom:0; left:0; right:0; height:40%; position:fixed; transform:translateY(100%); }
+    .lgwebos-remote-menu.open { transform:translate(0,0); opacity:1; }
+    .lgwebos-remote-menu-inner { padding:1rem; overflow-y:auto; height:100%; }
+    
+    /* Menu Animations */
+    .lgwebos-anim-fade { opacity:0; pointer-events:none; }
+    .lgwebos-remote-menu.open.lgwebos-anim-fade { opacity:1; pointer-events:auto; }
+    
+    /* Toggle Animations */
+    .lgwebos-remote-content { opacity:1; transition: all 0.3s ease; }
+    .lgwebos-remote-content.hidden { display:none; }
+    .lgwebos-anim-fade.hidden { opacity:0 !important; display:block !important; height:0; overflow:hidden; }
+    .lgwebos-anim-fade { opacity:1; height:auto; }
+    .lgwebos-anim-slide-down.hidden { max-height:0; overflow:hidden; }
+    .lgwebos-anim-slide-down { max-height:500px; transition:max-height 0.3s ease; }
+    .lgwebos-anim-slide-up.hidden { max-height:0; overflow:hidden; }
+    .lgwebos-anim-slide-up { max-height:500px; transition:max-height 0.3s ease; }
+    
+    /* Admin/editor helpers */
+    .lgwebos-remote-menu-editor { border:1px dashed #ccc; padding:8px; }
+    .lgwebos-remote-toggle-editor { border:1px dashed #99f; padding:8px; }
+    .lgwebos-remote-actions-editor { border:1px dashed #cfc; padding:8px; }
+
+/* Fullscreen Section */
+.lgwebos-fullscreen-section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.lgwebos-panel:not(.lg-webos-focused) {
+    display: none;
+}
+
+.lg-webos-focused {
+    z-index: 10;
+}
